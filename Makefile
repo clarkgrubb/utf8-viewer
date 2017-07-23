@@ -87,14 +87,14 @@ output/%:
 test.utf8_viewer: | output/utf8_viewer
 	-ruby -e '(0..255).each { |i| print i.chr }' \
 	| ./utf8_viewer.rb -bc \
-	> output/utf8_viewer/bytes.bcr.out
-	diff test/utf8_viewer/expected.bytes.bcr.out output/utf8_viewer/bytes.bcr.out
+	> output/bytes.bcr.out
+	diff test/expected.bytes.bcr.out output/bytes.bcr.out
 	#
-	./utf8_viewer.rb -a 33 34 35 > output/utf8_viewer/arg.decimal.out
-	diff test/utf8_viewer/expected.arg.out output/utf8_viewer/arg.decimal.out
+	./utf8_viewer.rb -a 33 34 35 > output/arg.decimal.out
+	diff test/expected.arg.out output/arg.decimal.out
 	#
-	./utf8_viewer.rb -a 041 042 043 > output/utf8_viewer/arg.octal.out
-	diff test/utf8_viewer/expected.arg.out output/utf8_viewer/arg.octal.out
+	./utf8_viewer.rb -a 041 042 043 > output/arg.octal.out
+	diff test/expected.arg.out output/arg.octal.out
 
 ruby_base := utf8_viewer
 ruby_harnesses := $(patsubst %,test.%,$(ruby_base))
