@@ -60,6 +60,10 @@ install-man: $(local_man1_dir)
 	cp $$target $(LOCAL_MAN_DIR)/man1; \
 	done
 
+.PHONY: install-script
+install-script:
+	cp utf8_viewer.rb $(LOCAL_INSTALL_DIR)/utf8-viewer
+
 .PHONY: install
 install: install-script install-man
 
