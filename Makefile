@@ -65,8 +65,7 @@ install-script:
 	cp utf8_viewer.rb $(LOCAL_INSTALL_DIR)/utf8-viewer
 
 .PHONY: install
-install: install-man
-	ln -s $(shell pwd)/utf8_viewer.rb $(LOCAL_INSTALL_DIR)/utf8-viewer
+install: install-man install-script
 
 .PHONY: all
 all:
