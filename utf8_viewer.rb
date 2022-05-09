@@ -61,7 +61,7 @@ SHIFTS = {
 }.freeze
 
 class UnicodeData
-  UNICODE_DATA_URL = 'ftp://ftp.unicode.org/Public/UNIDATA/UnicodeData.txt'.freeze
+  UNICODE_DATA_URL = 'http://unicode.org/Public/UNIDATA/UnicodeData.txt'.freeze
   POINT_IDX = 0
   NAME_IDX = 1
   GENERAL_CATEGORY_IDX = 2
